@@ -1,0 +1,7 @@
+md5:md5.o
+	gcc  --std=gnu99 -Wall  -g  -o md5 md5.o -lcrypto
+md5.o:md5.c
+	gcc  --std=gnu99 -Wall  -g  -c $< -lcrypto
+
+clean:
+	rm *.o md5
